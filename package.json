@@ -1,0 +1,61 @@
+{
+	"name": "bpd-dom",
+	"version": "1.0.0",
+	"description": "Simple library, fast dom inspired, handling HTML  DOM mutations",
+	"main": "./dist/esm/index.js",
+	"type": "module",
+	"files": [
+		"/dist/*"
+	],
+	"exports": {
+		"import": "./dist/esm/index.js",
+		"require": "./dist/main.cjs"
+	},
+	"scripts": {
+		"build": "webpack --config webpack.prod.cjs",
+		"build:minify": "webpack --config webpack.minify.cjs",
+		"build:esm": "tsc -p tsconfig.esm.json",
+		"test": "karma start karma.conf.cjs",
+		"prod": "npm run build && npm run build:esm && npm run build:minify",
+		"dev": "webpack serve --config webpack.dev.cjs"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/bpd-d/bpd-dom.git"
+	},
+	"keywords": [
+		"bpd",
+		"dom",
+		"fast",
+		"cui"
+	],
+	"author": "BPDev",
+	"license": "GPL-3.0-or-later",
+	"bugs": {
+		"url": "https://github.com/bpd-d/bpd-dom/issues"
+	},
+	"homepage": "https://github.com/bpd-d/bpd-dom#readme",
+	"dependencies": {
+		"@types/jasmine": "^3.7.7",
+		"fork-ts-checker-webpack-plugin": "^6.2.12",
+		"karma-typescript": "^5.5.1",
+		"ts-loader": "^9.2.3",
+		"typescript": "^4.3.4"
+	},
+	"devDependencies": {
+		"bpd-toolkit": "^1.4.0",
+		"clean-webpack-plugin": "^4.0.0-alpha.0",
+		"html-webpack-plugin": "^5.3.1",
+		"jasmine-core": "^3.7.1",
+		"karma": "^6.3.4",
+		"karma-chrome-launcher": "^3.1.0",
+		"karma-cli": "^2.0.0",
+		"karma-jasmine": "^4.0.1",
+		"karma-webpack": "^5.0.0",
+		"terser-webpack-plugin": "^5.1.3",
+		"webpack": "^5.39.1",
+		"webpack-cli": "^4.7.2",
+		"webpack-dev-server": "^3.11.2",
+		"webpack-merge": "^4.2.2"
+	}
+}

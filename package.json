@@ -1,6 +1,6 @@
 {
 	"name": "bpd-dom",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Simple library, fast dom inspired, handling HTML  DOM mutations",
 	"main": "./dist/esm/index.js",
 	"type": "module",

@@ -36,6 +36,7 @@ module.exports = {
 		filename: "[name].cjs",
 		path: path.resolve(__dirname, "dist"),
 		libraryTarget: "umd",
+		globalObject: "this",
 		library: ["bpdDom", "[name]"],
 		umdNamedDefine: true,
 	},
